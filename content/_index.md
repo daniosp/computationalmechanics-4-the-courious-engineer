@@ -10,7 +10,7 @@ sections:
       title: |
         Computational Mechanics 4 The Curious Engineer
       image:
-        filename: welcome.jpg
+        filename: ComputationalMechanics4TheCuriousEngineer LOGO BOX.png
       text: |
         <br>
         

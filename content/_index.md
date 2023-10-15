@@ -1,25 +1,24 @@
 ---
 # Leave the homepage title empty to use the site title
-title:
-date: 2022-10-24
+title: 
+date: 2023-10-15
 type: landing
 
 sections:
   - block: hero
     content:
       title: |
-        Wowchemy
-        Research Group
+        Computational Mechanics 4 The Curious Engineer
       image:
         filename: welcome.jpg
       text: |
         <br>
         
-        The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
+        Let's explore Computational Mechanics together! Whether you're a seasoned researcher, a student just starting your journey, or someone with a curious mind, this blog is your resource for all things related to computational mechanics.
   
   - block: collection
     content:
-      title: Latest News
+      title: Latest Publications
       subtitle:
       text:
       count: 5
@@ -55,13 +54,4 @@ sections:
       spacing:
         padding: ['20px', '0', '20px', '0']
       css_class: fullscreen
-  
-  - block: markdown
-    content:
-      title:
-      subtitle:
-      text: |
-        {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
-    design:
-      columns: '1'
 ---

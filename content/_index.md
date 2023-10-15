@@ -8,7 +8,7 @@ sections:
   - block: hero
     content:
       title: |
-        Computational Mechanics 4 The Curious Engineer
+        Computational Mechanics 4 The Curious Engineer <span style="color:red">red texto</span>
       image:
         filename: ComputationalMechanics4TheCuriousEngineer LOGO BOX.png
       text: |

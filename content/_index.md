@@ -8,17 +8,18 @@ sections:
   - block: hero
     content:
       title: |
-        Computational Mechanics 4 The Curious Engineer <span style="color:red">red texto</span>
+        Computational Mechanics <br>
+        <span style="color:#30B0E7"> 4 </span>The Curious Engineer 
       image:
         filename: ComputationalMechanics4TheCuriousEngineer LOGO BOX.png
       text: |
         <br>
         
-        Let's explore Computational Mechanics together! Whether you're a seasoned researcher, a student just starting your journey, or someone with a curious mind, this blog is your resource for all things related to computational mechanics.
+        I've created this website to share my experience as a Mechanical Engineering Student. Let's explore Computational Mechanics together! 
   
   - block: collection
     content:
-      title: Latest Publications
+      title: Recent Posts
       subtitle:
       text:
       count: 5

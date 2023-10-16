@@ -11,7 +11,7 @@ sections:
         Computational Mechanics <br>
         <span style="color:#30B0E7"> 4 </span>The Curious Engineer 
       image:
-        filename: ComputationalMechanics4TheCuriousEngineer LOGO BOX.png
+        filename: ComputationalMechanics4TheCuriousEngineer-LOGO-BOX.png
       text: |
         <br>
         

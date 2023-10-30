@@ -30,11 +30,11 @@ To create a Docker container, you first need to reference a base image, which is
 </p>
 
 
-1. *Building a container image from a _dockerfile_ :* <p align="justify"> _Dockerfiles_ are formatted text files that contain the instructions to build a Docker container. They define the configuration and setup of the environment within the container, specifying what software, libraries, and files should be included, and how the container should run. The Windows PowerShell terminal can be used to set the current directory to the path where the _Dockerfile_ is located. Then, a Docker container can be created by executing the following command in the terminal: </p>
+1. **Building a container image from a _dockerfile_ :** <p align="justify"> _Dockerfiles_ are formatted text files that contain the instructions to build a Docker container. They define the configuration and setup of the environment within the container, specifying what software, libraries, and files should be included, and how the container should run. The Windows PowerShell terminal can be used to set the current directory to the path where the _Dockerfile_ is located. Then, a Docker container can be created by executing the following command in the terminal: </p>
 ```Docker
 docker run -t -i name-of-image /bin/bash
 ```
-2. *Building a container image from Docker Hub:* <p align="justify"> Docker Hub is a cloud-based repository where the Docker community can upload, store, and share container images. Pulling container images from Docker Hub is easy since the Docker Desktop application has a built-in search bar. Simply search for the image you need, and then click the ‘Pull’ button to create a container from that image. </p>
+2. **Building a container image from Docker Hub:** <p align="justify"> Docker Hub is a cloud-based repository where the Docker community can upload, store, and share container images. Pulling container images from Docker Hub is easy since the Docker Desktop application has a built-in search bar. Simply search for the image you need, and then click the ‘Pull’ button to create a container from that image. </p>
 
 <p align="justify"> If any of the previous information remains unclear, here’s a short video by Fireship, which explains what Docker is in 100 seconds:
 </p>
@@ -43,7 +43,7 @@ docker run -t -i name-of-image /bin/bash
 
 ## Troubleshooting: Running AcouSTO within a Docker container 
 
-* *‘Provided BLACS not working’ issue.*
+* **‘Provided BLACS not working’ issue.**
 <p align="justify"> In Chapter 1.2 of AcouSTO's User Manual, the developers provide instructions for setting up AcouSTO using Docker. I personally tried first to install AcouSTO by running the official dockerfile provided by the developers on the application website. However, I came across an issue that did not allow me to complete the installation. 
 </p>
 
@@ -53,7 +53,7 @@ docker run -t -i name-of-image /bin/bash
 I looked for ways to solve the problem within the discussion forums on the <a href="https://sourceforge.net/projects/acousto/">AcouSTO sourceforge.net site</a>. In the ‘‘Help’’ sub-section I found a forum dedicated to addressing the error I received: <a href="https://sourceforge.net/p/acousto/discussion/852636/thread/ecebae1d2e/">‘‘Provided blacs do not work’’</a>. The discussion started in 2019 and offered a solution that seemed to have worked at that time. Umberto Iemma, one of the developers of the project,  suggested making a change in the _dockerfile_ to force the installation of version 8.6 of the Linux Debian distribution. This required changing line 6 of the file from  ‘‘FROM debian’’ to ‘‘FROM debian:8.6’’. After doing so, I was still getting the same error message. Upon reading further in the forum I learned that the Basic Linear Algebra Communication Subprograms (BLACS) library is now contained within another library that is not included as part of the setup environment in the current AcouSTO _dockerfile._ I might consider exploring a solution in the future. However, for now, it's much easier to build a Docker container by pulling a functional AcouSTO image from Docker Hub.
 </p>
 
-* *AcouSTO’s Docker container immediately stops when trying to run it.*
+* **AcouSTO’s Docker container immediately stops when trying to run it.**
 
 <p align="justify"> 
 I faced a minor issue while setting up AcouSTO through Docker, however,  I still managed to install the solver by using this method. The problem occurred when pulling the image through the program’s search bar. Although the application environment was created, it couldn't continue to run. Therefore, I decided to create the container using Docker commands within the Windows Powershell terminal, which worked for me. So, in case you are interested in setting up AcouSTO, below I’ll share a step-by-step guide to help you install the program.
@@ -144,3 +144,10 @@ I find it easier to share files by using the Docker Desktop user interface:
 4. A window will appear for you to select where to save your file(s) in the File Explorer.
 
 ![Right-click on the file or folder you want to save, then select save from the pop-up menu.](SaveExample.png "Right-click on the file or folder you want to save, then select '_Save_' from the pop-up menu.")
+
+***
+# Resources
+***
+Iemma, U. & Marchese, V. (2017). AcouSTO User’s Manual v2.0. https://acousto.sourceforge.net/UserManual.pdf
+Docker docs. (2023). Install Docker Desktop on Windows. https://docs.docker.com/desktop/install/windows-install/
+ 

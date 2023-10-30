@@ -18,12 +18,13 @@ organizations:
     url: 'https://www.eafit.edu.co/'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include acoustics, computer-aided design, computer-aided engineering, and dynamic systems.
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Acoustics.
+  - Computer-Aided Design.
+  - Computer-Aided Engineering.
+  - Dynamic Systems.
 
 education:
   courses:
@@ -61,6 +62,6 @@ user_groups:
 ---
 
 Hi there!
-I'm a Mechanical Engineering Student at Universidad EAFIT. My research interests include Acoustics, Computer-aided design, Computer-aided engineering, and Dynamic Systems. I've participated in the CAD/CAM/CAE lab. as a Teacher Assistant and researcher, where I've developed knowledge of Geometric Modeling.
+I'm a Mechanical Engineering Student at Universidad EAFIT. My research interests include Acoustics, Computer-aided design, Computer-aided engineering, and Dynamic Systems. I've participated in the CAD/CAM/CAE laboratory as a Teacher Assistant and researcher, where I've developed knowledge in Geometric Modeling.
 
 

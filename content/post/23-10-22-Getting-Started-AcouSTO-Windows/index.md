@@ -63,23 +63,20 @@ I faced a minor issue while setting up AcouSTO through Docker, however,  I still
 ## The Windows user step-by-step guide for setting up AcouSTO
 ***
 
-1. <p align="justify"> 
-The Windows Subsystem for Linux, or WSL, is required to run Docker Desktop. This feature is enabled by accessing Windows Powershell as an administrator and typing the following command:
-</p>
+1. The Windows Subsystem for Linux, or WSL, is required to run Docker Desktop. This feature is enabled by accessing Windows Powershell as an administrator and typing the following command:
 
 ```PowerShell
 wsl --install
 ```
-<p align="justify"> 
-A system restart is required after running the command.
-</p>
 
-<p align="justify"> 
+A system restart is required after running the command.
+
 You can also check out if you already have a WSL version by running the command:
-</p>
+
 ```PowerShell
 wsl -l -v
 ```
+
 2. Download Docker Desktop from [this website.](https://www.docker.com/products/docker-desktop/)
 
 3. Double-click *Docker Desktop Installer.exe* to run the installation manager.
@@ -102,11 +99,11 @@ This command pulls the AcouSTO image “uiemma/acousto:v16debian” from Docker 
 Once you complete all of the previous steps you’ll be logged into the AcouSTO virtual machine under the path $HOME/acousto-1.6. You can now use AcouSTO on your computer. The next tutorials will cover how to use this tool for acoustic simulation.
 </p>
 
-![Your Windows Powershell terminal should look something like this."](AcoustoPath.png "Your Windows Powershell terminal should look something like this.")
+![Your Windows Powershell terminal should look something like this.](AcoustoPath.png "Your Windows Powershell terminal should look something like this.")
 
 ## The Windows user step-by-step guide for setting up AcouSTO
 
-*Further accessing AcouSTO through Docker.*
+**Further accessing AcouSTO through Docker.**
 
 1. Open the Windows Powershell terminal and start your AcouSTO Docker container by running the following command:
 
@@ -114,24 +111,27 @@ Once you complete all of the previous steps you’ll be logged into the AcouSTO 
 docker start container_custom_name
 ```
 2. Once the container is up and running, execute the docker container via the following command:
+
 ```Docker
 docker exec -t -i container_custom_name /bin/bash
 ```
 You’ll be logged into the container‘s environment under the path $HOME/acousto-1.6.
 
-*Closing AcouSTO Docker container correctly.*
+**Closing AcouSTO Docker container correctly.**
 
 1. While inside the container’s environment, run the command “_exit_” in the command line to leave the AcouSTO container.
 2. After doing so, make sure to stop the container environment by typing the following command in the terminal:
+
 ```Docker
 docker stop container_custom_name
 ```
+
 3. To ensure that the container has been closed successfully, you can use the command “_docker ps_” to display the list of all currently running containers. The list should not contain the container “container_custom_name”.
 ```Docker
 docker ps
 ```
 
-*Sharing files from the container to the Host OS*
+**Sharing files from the container to the Host OS**
 
 I find it easier to share files by using the Docker Desktop user interface:
 
@@ -143,4 +143,4 @@ I find it easier to share files by using the Docker Desktop user interface:
 
 4. A window will appear for you to select where to save your file(s) in the File Explorer.
 
-![Right-click on the file or folder you want to save, then select "_Save_" from the pop-up menu."](SaveExample.png "Right-click on the file or folder you want to save, then select "_Save_" from the pop-up menu.")
+![Right-click on the file or folder you want to save, then select "_Save_" from the pop-up menu.](SaveExample.png "Right-click on the file or folder you want to save, then select "_Save_" from the pop-up menu.")

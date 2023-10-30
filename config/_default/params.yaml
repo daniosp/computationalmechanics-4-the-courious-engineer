@@ -64,6 +64,7 @@ locale:
 features:
   syntax_highlighter:
     enable: true
+    theme_light: github-dark
     extra_languages:
       - r
       - latex

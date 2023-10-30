@@ -8,7 +8,7 @@ share: false
 ---
 
 <p align="justify">
-As a Mechanical Engineering student, I was searching for an approach to acoustics when I came across AcouSTO - an open-source software. It was presented to me as a great alternative to learning about the complex science of sound wave propagation. Additionally, the [professor](https://nicoguaro.github.io/pages/about/) who introduced me to the software also suggested to share my findings in the form of a blog post. Thus, this project was born. AcouSTO's computing capabilities will be the starting point of our discussion. Let's clarify what they are.
+As a Mechanical Engineering student, I was searching for an approach to acoustics when I came across AcouSTO - an open-source software. It was presented to me as a great alternative to learning about the complex science of sound wave propagation. Additionally, the <a href="https://nicoguaro.github.io/pages/about/">professor</a> who introduced me to the software also suggested to share my findings in the form of a blog post. Thus, this project was born. AcouSTO's computing capabilities will be the starting point of our discussion. Let's clarify what they are.
 </p>
 
 <!--more-->
@@ -18,7 +18,7 @@ As a Mechanical Engineering student, I was searching for an approach to acoustic
 ***
 
 <p align="justify">
-AcouSTO is an open-source software for acoustic simulation released in 2009. The project was developed as a Boundary Element Method (BEM) solver for the Kirchhoff-Helmholtz Integral Equation (KHIE) within domains of arbitrary geometry. Although many open-source software alternatives for the simulation of multiple physics phenomena were available at the time, AcouSTO emerged as an acoustic-centered solution capable of handling interior and exterior problems whilst being a relatively simple tool for the average experienced user.
+AcouSTO is an open-source software for acoustic simulation released in 2009. The project was developed as a Boundary Element Method (BEM) solver for the Kirchhoff-Helmholtz Integral Equation (KHIE) within domains of arbitrary geometry. Although many open-source software alternatives for the simulation of multiple physics phenomena were available at the time, AcouSTO emerged as an acoustic-centered solution capable of handling interior and exterior problems whilst being a relatively simple tool for the average experienced user. 
 </p>
 <p align="justify">
 If you are unfamiliar with the Boundary Element Method, in essence, it is a numerical technique used in computational mechanics to solve problems in which the solution depends only on the boundary of the domain, rather than the entire domain itself. This method is applied in fields such as heat transfer, fluid dynamics, electromagnetism, and, in particular, problems involving boundary surfaces.  Let’s take an example of a situation on heat transfer to clarify what the main idea behind the method is:
@@ -48,7 +48,7 @@ Upon reviewing the official website and the User Manual, I noticed several impor
 * Pre- and post-processing with [Gmsh](http://geuz.org/gmsh/), [Paraview](http://www.paraview.org/), and [Blender](http://www.blender.org/).
 * Easy installation via GNU build system (Linux and OSX) or [Docker](http://www.docker.com/) image.
 * [Windows 10 Linux Subsystem](https://msdn.microsoft.com/it-it/commandline/wsl/install_guide) compatible.
-* The use of the KHIE for the analysis of the radiation and scattering of a closed surface {{< math >}}$S${{< /math >}} within the free space is affected by the so–called fictitious _eigenfrequencies_ problem. This problem causes the scattered acoustic field in the surrounding unbounded domain to display non-physical resonances that are related to the _eigensolutions_ of the interior problem. To address this issue, AcouSTO provides an option to regularize the BEM exterior solution using the CHIEF technique (Combined Helmholtz Integral Equation Formulation). However, this approach has a drawback as it reduces reliability at high frequencies or for frequencies corresponding to a high modal density range for the enclosure bounded by {{< math >}}$S${{< /math >}}.
+* The use of the KHIE for the analysis of the radiation and scattering of a closed surface {{< math >}}$$S$${{< /math >}} within the free space is affected by the so–called fictitious _eigenfrequencies_ problem. This problem causes the scattered acoustic field in the surrounding unbounded domain to display non-physical resonances that are related to the _eigensolutions_ of the interior problem. To address this issue, AcouSTO provides an option to regularize the BEM exterior solution using the CHIEF technique (Combined Helmholtz Integral Equation Formulation). However, this approach has a drawback as it reduces reliability at high frequencies or for frequencies corresponding to a high modal density range for the enclosure bounded by {{< math >}}$$S$${{< /math >}}.
 * The current version of AcouSTO can handle only isolated monopoles and incoming plane waves. There are currently no limits on the number of monopoles or incoming plane waves that can be configured for a problem.
 * The current version of the code is unable to handle surfaces or sources that move.
 

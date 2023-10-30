@@ -28,6 +28,7 @@ Imagine you have an irregularly shaped metal plate, and you want to understand h
 </p>
 <p align="justify">
 The Boundary Element Method becomes especially helpful in acoustic problem-solving as the interest of the problem rests on the scattering of waves around geometric surfaces. Integral equations describe the relationship between the acoustic field and the boundary conditions, yielding solutions on the boundary. What’s more, AcouSTO allows the configuration of “microphones” at any location in the analyzed domain to obtain values at desired points of interest. In general, AcouSTO offers two categories of problem-solving as detailed in the User Manual:</p>
+
 * Scattering of planar or spherical waves by multiple, arbitrarily shaped, bodies ;
 * Radiation of vibrating closed surfaces with wall motion assigned.
 
@@ -48,7 +49,7 @@ Upon reviewing the official website and the User Manual, I noticed several impor
 * Pre- and post-processing with [Gmsh](http://geuz.org/gmsh/), [Paraview](http://www.paraview.org/), and [Blender](http://www.blender.org/).
 * Easy installation via GNU build system (Linux and OSX) or [Docker](http://www.docker.com/) image.
 * [Windows 10 Linux Subsystem](https://msdn.microsoft.com/it-it/commandline/wsl/install_guide) compatible.
-* The use of the KHIE for the analysis of the radiation and scattering of a closed surface {{< math >}}$$S$${{< /math >}} within the free space is affected by the so–called fictitious _eigenfrequencies_ problem. This problem causes the scattered acoustic field in the surrounding unbounded domain to display non-physical resonances that are related to the _eigensolutions_ of the interior problem. To address this issue, AcouSTO provides an option to regularize the BEM exterior solution using the CHIEF technique (Combined Helmholtz Integral Equation Formulation). However, this approach has a drawback as it reduces reliability at high frequencies or for frequencies corresponding to a high modal density range for the enclosure bounded by {{< math >}}$$S$${{< /math >}}.
+* The use of the KHIE for the analysis of the radiation and scattering of a closed surface {{< math >}}$S${{< /math >}} within the free space is affected by the so–called fictitious _eigenfrequencies_ problem. This problem causes the scattered acoustic field in the surrounding unbounded domain to display non-physical resonances that are related to the _eigensolutions_ of the interior problem. To address this issue, AcouSTO provides an option to regularize the BEM exterior solution using the CHIEF technique (Combined Helmholtz Integral Equation Formulation). However, this approach has a drawback as it reduces reliability at high frequencies or for frequencies corresponding to a high modal density range for the enclosure bounded by {{< math >}}$S${{< /math >}}.
 * The current version of AcouSTO can handle only isolated monopoles and incoming plane waves. There are currently no limits on the number of monopoles or incoming plane waves that can be configured for a problem.
 * The current version of the code is unable to handle surfaces or sources that move.
 

@@ -143,4 +143,4 @@ I find it easier to share files by using the Docker Desktop user interface:
 
 4. A window will appear for you to select where to save your file(s) in the File Explorer.
 
-![Right-click on the file or folder you want to save, then select "_Save_" from the pop-up menu.](SaveExample.png "Right-click on the file or folder you want to save, then select "_Save_" from the pop-up menu.")
+![Right-click on the file or folder you want to save, then select save from the pop-up menu.](SaveExample.png "Right-click on the file or folder you want to save, then select '_Save_' from the pop-up menu.")

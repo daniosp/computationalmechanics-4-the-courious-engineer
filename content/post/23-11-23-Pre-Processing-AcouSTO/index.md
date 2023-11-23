@@ -76,7 +76,7 @@ We will solve the acoustic problem for the given values {{< math >}}$a=1${{< mat
 The files needed for the tutorial are located under the path:
 </p>
 
-```Docker
+```PowerShell
 ~/acousto-1.6b/doc/tutorials/Sphere_Monopole$
 ```
 <p align="justify">
@@ -130,12 +130,12 @@ This block contains the general parameters and information about the code execut
 
 ```c++
 runinfo={
-active = 1; 
-title = "custom-title";   // Title of the current code execution
-owner = "name";           // Username of the person who runs the code
-ksymmi=24;                // Symmetry flag
-krow  =-1;                // Number of matrix rows to be loaded in RAM
-vsound  =343.0;           // Speed of sound, 343 m/s for standard air
+ active = 1; 
+ title = "custom-title";   // Title of the current code execution
+ owner = "name";           // Username of the person who runs the code
+ ksymmi=24;                // Symmetry flag
+ krow  =-1;                // Number of matrix rows to be loaded in RAM
+ vsound  =343.0;           // Speed of sound, 343 m/s for standard air
 };
 ```
 <p align="justify">

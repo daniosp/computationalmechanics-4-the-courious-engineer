@@ -20,12 +20,9 @@ Now that AcouSTO is installed on our computer, we are ready to use it. Our first
 The problem that we will be solving consists of the scattering of a sound wave around a rigid sphere. The source of the sound wave, which is located at a distance {{< math >}}$r_s${{< math >}} from the origin {{< math >}}$O${{< math >}}, is a monopole of unit amplitude. This means that the source is simplified as a point in space that radiates sound equally in all directions.  The propagating sound wave will interact with the surface of a rigid sphere of radius {{< math >}}$a${{< math >}}, whose center is coincident with the origin.  The problem has an axisymmetric behavior w.r.t. the axis that includes both the origin and the source location, therefore the complete solution for the whole field can be obtained by solving the problem for an arbitrary plane passing through the symmetry axis. The formulation of the problem within a generic plane can be written in polar coordinates; where the source would be located at {{< math >}}$\mathbf{r_s}=(r_s,\theta)${{< math >}}. 
 </p>
 
-
-
 <p align="justify">
 Now that we have a clear formulation of the situation let’s continue by reviewing the governing equations of the acoustic problem. However, before we dive any further into mathematics, I must make a disclaimer. The math behind the solution to this problem can be somewhat complicated for a student who is just learning the basics of acoustics. Based on that reasoning, I will explain the main equations used by the software to solve the acoustic problem and clarify the meaning of its terms in a more beginner-friendly manner. 
 </p>
-
 
 <p align="justify">
 AcouSTO solves for the velocity potential {{< math >}}$(\phi)${{< math >}} function of an acoustic field, which in this case  is written as:
@@ -65,13 +62,11 @@ This equation is used to calculate the potential velocity measured at a circle f
  <li>{{< math >}}$P_n(x)${{< math >}}: Legrende polynomial of order $n$. Refers to a mathematical expression used for solving Helmholtz’s equation (equation {{< math >}}$(1)${{< math >}}).</li>
 
  <li>{{< math >}}$R=||\mathbf{r-r_s}||${{< math >}}: Indicates the magnitude of the distance distance between an arbitrary point in space, {{< math >}}$\mathbf{r}=(r,\theta)${{< math >}}, and the point where the source is located, {{< math >}}$\mathbf{r_s}=(r_s,0)${{< math >}}.</li>
-
 </ol>
 
 <p align="justify">
 We will solve the acoustic problem for the given values {{< math >}}$a=1${{< math >}} and {{< math >}}$r_s=3${{< math >}}. In the following section, we will discuss how the main configuration file is set up to solve the problem correctly with the use of AcouSTO.
 </p>
-
 
 ***
 ## Understanding the main configuration file

@@ -76,6 +76,7 @@ We will solve the acoustic problem for the given values {{< math >}}$a=1${{< mat
 ***
 ## Understanding the main configuration file
 ***
+
 <p align="justify">
 The files needed for the tutorial are located under the path:
 </p>

@@ -12,9 +12,9 @@ Now that AcouSTO is installed on our computer, we are ready to use it. Our first
 
 <!--more-->
 
-***
-## A (not so thorough) presentation of the analytical solution
-***
+<hr>
+<h2> A (not so thorough) presentation of the analytical solution </h2>
+<hr>
 
 <p align="justify">
 The problem that we will be solving consists of the scattering of a sound wave around a rigid sphere. The source of the sound wave, which is located at a distance {{< math >}}$r_s${{< math >}} from the origin {{< math >}}$O${{< math >}}, is a monopole of unit amplitude. This means that the source is simplified as a point in space that radiates sound equally in all directions.  The propagating sound wave will interact with the surface of a rigid sphere of radius {{< math >}}$a${{< math >}}, whose center is coincident with the origin.  The problem has an axisymmetric behavior w.r.t. the axis that includes both the origin and the source location, therefore the complete solution for the whole field can be obtained by solving the problem for an arbitrary plane passing through the symmetry axis. The formulation of the problem within a generic plane can be written in polar coordinates; where the source would be located at {{< math >}}$\mathbf{r_s}=(r_s,\theta)${{< math >}}. 
@@ -68,9 +68,9 @@ This equation is used to calculate the potential velocity measured at a circle f
 We will solve the acoustic problem for the given values {{< math >}}$a=1${{< math >}} and {{< math >}}$r_s=3${{< math >}}. In the following section, we will discuss how the main configuration file is set up to solve the problem correctly with the use of AcouSTO.
 </p>
 
-***
-## Understanding the main configuration file
-***
+<hr>
+<h2> Understanding the main configuration file </h2>
+<hr>
 
 <p align="justify">
 The files needed for the tutorial are located under the path:
@@ -119,7 +119,11 @@ For this first approach to AcouSTO, we’ll only be using the following files:
 AcouSTO 's configuration files consist of modular code blocks. The blocks contain the parameter values for the many variables that the program has to consider when solving an acoustic simulation. Below, we will analyze the meaning behind the most important parameters of each of the blocks contained within the sphere_source.cfg configuration file.
 </p>
 
-* <strong><em>runinfo</em> block:</strong>
+<ul>
+ <li> <strong><em>runinfo</em> block:</strong>
+ </li>
+</ul>
+
 <p align="justify">
 This block contains the general parameters and information about the code execution.
 </p>
@@ -138,7 +142,7 @@ runinfo={
 The parameter ksymmi becomes particularly important for this problem as it indicates the number of symmetric slices that the solver will handle. Later it will be shown that the value of this parameter is consistent with the configuration of the geometry. For axis-symmetrical problems, the parameter has values {{< math >}}$N>3${{< math >}}, where {{< math >}}$N${{< math >}} refers to the number of partitions of the geometry.  On the other hand, the krow flag controls memory allocation in RAM. When the value of this parameter is set to krow {{< math >}}$\le 0${{< math >}}, like in this case, it indicates to AcouSTO that the number of matrixes to be loaded in RAM is equal to the total number of control points of the geometry. 
 </p>
 
-***
-# Resources
-***
+<hr>
+<h2> Resources </h2>
+<hr>
 Iemma, U. & Marchese, V. (2017). 

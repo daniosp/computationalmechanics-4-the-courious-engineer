@@ -129,7 +129,7 @@ AcouSTO 's configuration files consist of modular code blocks. The blocks contai
 This block contains the general parameters and information about the code execution.
 </p>
 
-{{< highlight c>}}
+{{< highlight cpp>}}
 runinfo={
  active = 1; 
  title = "custom-title";   // Title of the current code execution

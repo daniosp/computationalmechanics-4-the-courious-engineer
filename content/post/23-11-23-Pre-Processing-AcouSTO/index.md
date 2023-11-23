@@ -226,7 +226,10 @@ z = <rotation around Z axis in degrees>;
 In the particular case of the problem that we are solving, it is essential to rotate the spherical geometry by 90&deg around the Y global axis. This will align the sphere's default polar axis with the global X-axis, ensuring that the solution to the problem is symmetrical w.r.t. to the axis of convenience. This is graphically explained as shown in the following figure:
 </p>
 
-![Rotation around the Y global axis.](rotation_ex.png "Rotation around the Y global axis.")
+<figure>
+  <img src="rotation_ex.png" alt="Rotation around the Y global axis." style="width:100%">
+  <figcaption>Rotation around the Y global axis.</figcaption>
+</figure>
 
 <ul>
  <li> <strong><em>modsol</em> block :</strong>

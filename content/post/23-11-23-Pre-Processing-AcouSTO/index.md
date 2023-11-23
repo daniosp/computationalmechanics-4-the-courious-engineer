@@ -76,6 +76,14 @@ We will solve the acoustic problem for the given values {{< math >}}$a=1${{< mat
 The files needed for the tutorial are located under the path:
 </p>
 
+{{< highlight PowerShell "linenos=table" >}}
+~/acousto-1.6b/doc/tutorials/Sphere_Monopole$
+{{< / highlight >}}
+
+{{< highlight go "linenos=table" >}}
+~/acousto-1.6b/doc/tutorials/Sphere_Monopole$
+{{< / highlight >}}
+
 ```PowerShell
 ~/acousto-1.6b/doc/tutorials/Sphere_Monopole$
 ```

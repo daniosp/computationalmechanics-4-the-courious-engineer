@@ -21,7 +21,7 @@ The problem that we will be solving consists of the scattering of a sound wave a
 </p>
 
 <p align="justify">
-Now that we have a clear formulation of the situation let’s continue by reviewing the governing equations of the acoustic problem. However, before we dive any further into mathematics, I must make a disclaimer. The math behind the solution to this problem can be somewhat complicated for a student who is just learning the basics of acoustics. Based on that reasoning, I will explain the main equations used by the software to solve the acoustic problem and clarify the meaning of its terms in a more beginner-friendly manner. 
+Now that we have a clear formulation of the situation let's continue by reviewing the governing equations of the acoustic problem. However, before we dive any further into mathematics, I must make a disclaimer. The math behind the solution to this problem can be somewhat complicated for a student who is just learning the basics of acoustics. Based on that reasoning, I will explain the main equations used by the software to solve the acoustic problem and clarify the meaning of its terms in a more beginner-friendly manner. 
 </p>
 
 <p align="justify">
@@ -59,7 +59,7 @@ This equation is used to calculate the potential velocity measured at a circle f
 
  <li>{{< math >}}$h_n(kr)${{< math >}} and {{< math >}}$(kr)${{< math >}}: Hankel and Bessel functions of the first kind. Mathematical functions used in acoustics and wave physics to describe the radial components of spherical waves.</li>
 
- <li>{{< math >}}$P_n(x)${{< math >}}: Legrende polynomial of order $n$. Refers to a mathematical expression used for solving Helmholtz’s equation (equation {{< math >}}$(1)${{< math >}}).</li>
+ <li>{{< math >}}$P_n(x)${{< math >}}: Legrende polynomial of order $n$. Refers to a mathematical expression used for solving Helmholtz's equation (equation {{< math >}}$(1)${{< math >}}).</li>
 
  <li>{{< math >}}$R=||\mathbf{r-r_s}||${{< math >}}: Indicates the magnitude of the distance distance between an arbitrary point in space, {{< math >}}$\mathbf{r}=(r,\theta)${{< math >}}, and the point where the source is located, {{< math >}}$\mathbf{r_s}=(r_s,0)${{< math >}}.</li>
 </ol>
@@ -80,7 +80,7 @@ The files needed for the tutorial are located under the path:
 ~/acousto-1.6b/doc/tutorials/Sphere_Monopole$
 ```
 <p align="justify">
-For this first approach to AcouSTO, we’ll only be using the following files:
+For this first approach to AcouSTO, we'll only be using the following files:
 </p>
 
 <style type="text/css">
@@ -130,12 +130,12 @@ This block contains the general parameters and information about the code execut
 
 ```c++
 runinfo={
- active = 1; 
- title = "custom-title";   // Title of the current code execution
- owner = "name";           // Username of the person who runs the code
- ksymmi=24;                // Symmetry flag
- krow  =-1;                // Number of matrix rows to be loaded in RAM
- vsound  =343.0;           // Speed of sound, 343 m/s for standard air
+active = 1; 
+title = "custom-title";   // Title of the current code execution
+owner = "name";           // Username of the person who runs the code
+ksymmi=24;                // Symmetry flag
+krow  =-1;                // Number of matrix rows to be loaded in RAM
+vsound  =343.0;           // Speed of sound, 343 m/s for standard air
 };
 ```
 <p align="justify">

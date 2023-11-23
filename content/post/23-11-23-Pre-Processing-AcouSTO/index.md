@@ -117,7 +117,7 @@ For this first approach to AcouSTO, we'll only be using the following files:
 </table>
 
 <p align="justify">
-AcouSTO 's configuration files consist of modular code blocks. The blocks contain the parameter values for the many variables that the program has to consider when solving an acoustic simulation. Below, we will analyze the meaning behind the most important parameters of each of the blocks contained within the sphere_source.cfg configuration file.
+AcouSTO 's configuration files consist of modular code blocks. The blocks contain the parameter values for the many variables that the program has to consider when solving an acoustic simulation. Below, we will analyze the meaning behind the most important parameters of each of the blocks contained within the <em>sphere_source.cfg</em> configuration file.
 </p>
 
 <ul>
@@ -141,7 +141,7 @@ runinfo={
 {{< / highlight >}}
 
 <p align="justify">
-The parameter <em>ksymmi</em> becomes particularly important for this problem as it indicates the number of symmetric slices that the solver will handle. Later it will be shown that the value of this parameter is consistent with the configuration of the geometry. For axis-symmetrical problems, the parameter has values {{< math >}}$N>3${{< math >}}, where {{< math >}}$N${{< math >}} refers to the number of partitions of the geometry.  On the other hand, the krow flag controls memory allocation in RAM. When the value of this parameter is set to krow {{< math >}}$\le 0${{< math >}}, like in this case, it indicates to AcouSTO that the number of matrixes to be loaded in RAM is equal to the total number of control points of the geometry. 
+The parameter <em>ksymmi</em> becomes particularly important for this problem as it indicates the number of symmetric slices that the solver will handle. Later it will be shown that the value of this parameter is consistent with the configuration of the geometry. For axis-symmetrical problems, the parameter has values {{< math >}}$N>3${{< math >}}, where {{< math >}}$N${{< math >}} refers to the number of partitions of the geometry.  On the other hand, the <em>krow flag</em> controls memory allocation in RAM. When the value of this parameter is set to <em>krow</em> {{< math >}}$\le 0${{< math >}}, like in this case, it indicates to AcouSTO that the number of matrixes to be loaded in RAM is equal to the total number of control points of the geometry. 
 </p>
 
 <ul>
@@ -150,7 +150,7 @@ The parameter <em>ksymmi</em> becomes particularly important for this problem as
 </ul>
 
 <p align="justify">
-This block establishes the geometry of the boundaries that are present in the acoustic problem. We won't be covering situations where the Combined Helmholtz Integral Equation Formulation is needed, therefore, the chief_file and n_chief parameters won’t be commented in the following block of code.
+This block establishes the geometry of the boundaries that are present in the acoustic problem. We won't be covering situations where the Combined Helmholtz Integral Equation Formulation is needed, therefore, the <em>chief_file</em> and <em>n_chief</em> parameters won't be commented in the following block of code.
 </p>
 
 {{< highlight cpp>}}
@@ -192,7 +192,7 @@ rotation={x=0.0; y=-90.0; z=0.0;};
 {{< / highlight >}}
 
 <p align="justify">
-Notice that the longitudinal number of partitions coincides with the number of slices set up by the parameter ksymmi in the modgeom block (both parameters have a value of 24). One final note regarding geometry creation is a comment on transformations such as scaling, translation, and rotation. These transformations can be applied to geometries within AcouSTO by adding the following parameters:
+Notice that the longitudinal number of partitions coincides with the number of slices set up by the parameter <em>ksymmi</em> in the <em>modgeom</em> block (both parameters have a value of 24). One final note regarding geometry creation is a comment on transformations such as scaling, translation, and rotation. These transformations can be applied to geometries within AcouSTO by adding the following parameters:
 </p>
 
 {{< highlight cpp>}}
@@ -228,7 +228,7 @@ In the particular case of the problem that we are solving, it is essential to ro
 </ul>
 
 <p align="justify">
-This block manages the solution parameters. In this block, sigma and omega are the real and imaginary parts of the Laplace variable, {{< math >}}$s=\sigma+i\omega${{< math >}}. It is up to the user to enter the values for the frequency range in {{< math >}}$rad/s${{< math >}} using the parameters minome and maxome, or in {{< math >}}$Hz${{< math >}} by using the parameters minfreq and maxfreq.
+This block manages the solution parameters. In this block, <em>sigma</em> and <em>omega</em> are the real and imaginary parts of the Laplace variable, {{< math >}}$s=\sigma+i\omega${{< math >}}. It is up to the user to enter the values for the frequency range in {{< math >}}$rad/s${{< math >}} using the parameters <em>minome</em> and <em>maxome</em>, or in {{< math >}}$Hz${{< math >}} by using the parameters <em>minfreq</em> and <em>maxfreq</em>.
 </p>
 
 {{< highlight cpp>}}

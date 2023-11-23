@@ -57,10 +57,14 @@ $$
 This equation is used to calculate the potential velocity measured at a circle formed by 100 microphones positioned at a distance {{< math >}} $r_{mics}=1.5a${{< math >}} . Some of the terms within the equation may seem complex, hence, to provide a better understanding, a list containing their explanations is presented below:
 </p>
 
-1. {{< math >}} $\phi_{inc}${{< math >}}  and {{< math >}} $\phi_{sc}${{< math >}} : Velocity potential of the incident and scattered field, respectively. The incident field refers to the velocity potential solution for a domain where no obstacle or interference is present. On the other hand, the scattered field delivers information regarding how the sound wave deviates from its original behavior once it encounters objects or boundaries.
-2. {{< math >}}$h_n(kr)${{< math >}} and {{< math >}}$(kr)${{< math >}}: Hankel and Bessel functions of the first kind. Mathematical functions used in acoustics and wave physics to describe the radial components of spherical waves.
-3. {{< math >}}$P_n(x)${{< math >}}: Legrende polynomial of order $n$. Refers to a mathematical expression used for solving Helmholtz’s equation (equation {{< math >}}$(1)${{< math >}}).
-4. {{< math >}}$R=||\mathbf{r-r_s}||${{< math >}}: Indicates the magnitude of the distance distance between an arbitrary point in space, {{< math >}}$\mathbf{r}=(r,\theta)${{< math >}}, and the point where the source is located, {{< math >}}$\mathbf{r_s}=(r_s,0)${{< math >}}.
+<ol>
+  <li>{{< math >}} $\phi_{inc}${{< math >}}  and {{< math >}} $\phi_{sc}${{< math >}} : Velocity potential of the incident and scattered field, respectively. The incident field refers to the velocity potential solution for a domain where no obstacle or interference is present. On the other hand, the scattered field delivers information regarding how the sound wave deviates from its original behavior once it encounters objects or boundaries.</li>
+
+ <li>{{< math >}}$h_n(kr)${{< math >}} and {{< math >}}$(kr)${{< math >}}: Hankel and Bessel functions of the first kind. Mathematical functions used in acoustics and wave physics to describe the radial components of spherical waves.</li>
+
+ <li>{{< math >}}$P_n(x)${{< math >}}: Legrende polynomial of order $n$. Refers to a mathematical expression used for solving Helmholtz’s equation (equation {{< math >}}$(1)${{< math >}}).</li>
+
+ <li>{{< math >}}$R=||\mathbf{r-r_s}||${{< math >}}: Indicates the magnitude of the distance distance between an arbitrary point in space, {{< math >}}$\mathbf{r}=(r,\theta)${{< math >}}, and the point where the source is located, {{< math >}}$\mathbf{r_s}=(r_s,0)${{< math >}}.</li>
 
 <p align="justify">
 We will solve the acoustic problem for the given values {{< math >}}$a=1${{< math >}} and {{< math >}}$r_s=3${{< math >}}. In the following section, we will discuss how the main configuration file is set up to solve the problem correctly with the use of AcouSTO.
@@ -81,11 +85,37 @@ The files needed for the tutorial are located under the path:
 For this first approach to AcouSTO, we’ll only be using the following files:
 </p>
 
-| **File name**          | **Content**                                               |
-|------------------------|-----------------------------------------------------------|
-| _sphere_source.cfg_    | Main configuration file for setting up AcouSTO 's solver. |
-| _acousto.sources_      | Location and intensity of the sound source.               |
-| _acousto.mics1.5.mesh_ | Coordinate placement for the circle of microphones.       |
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">File name</th>
+    <th class="tg-fymr">Content</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky"><span style="font-style:italic">sphere_source.cfg</span></td>
+    <td class="tg-0pky">Main configuration file for setting up AcouSTO 's solver.</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-style:italic">acousto.sources</span></td>
+    <td class="tg-0pky">Location and intensity of the sound source.</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-style:italic">acousto.mics1.5.mesh</span></td>
+    <td class="tg-0pky">Coordinate placement for the circle of microphones.</td>
+  </tr>
+</tbody>
+</table>     |
 
 <p align="justify">
 AcouSTO 's configuration files consist of modular code blocks. The blocks contain the parameter values for the many variables that the program has to consider when solving an acoustic simulation. Below, we will analyze the meaning behind the most important parameters of each of the blocks contained within the sphere_source.cfg configuration file.

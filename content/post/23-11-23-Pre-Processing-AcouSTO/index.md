@@ -141,10 +141,125 @@ runinfo={
 {{< / highlight >}}
 
 <p align="justify">
-The parameter ksymmi becomes particularly important for this problem as it indicates the number of symmetric slices that the solver will handle. Later it will be shown that the value of this parameter is consistent with the configuration of the geometry. For axis-symmetrical problems, the parameter has values {{< math >}}$N>3${{< math >}}, where {{< math >}}$N${{< math >}} refers to the number of partitions of the geometry.  On the other hand, the krow flag controls memory allocation in RAM. When the value of this parameter is set to krow {{< math >}}$\le 0${{< math >}}, like in this case, it indicates to AcouSTO that the number of matrixes to be loaded in RAM is equal to the total number of control points of the geometry. 
+The parameter <em>ksymmi</em> becomes particularly important for this problem as it indicates the number of symmetric slices that the solver will handle. Later it will be shown that the value of this parameter is consistent with the configuration of the geometry. For axis-symmetrical problems, the parameter has values {{< math >}}$N>3${{< math >}}, where {{< math >}}$N${{< math >}} refers to the number of partitions of the geometry.  On the other hand, the krow flag controls memory allocation in RAM. When the value of this parameter is set to krow {{< math >}}$\le 0${{< math >}}, like in this case, it indicates to AcouSTO that the number of matrixes to be loaded in RAM is equal to the total number of control points of the geometry. 
+</p>
+
+<ul>
+ <li> <strong><em>modgeom</em> block and AcouSTO 's built-in geometry pre-processor:</strong>
+ </li>
+</ul>
+
+<p align="justify">
+This block establishes the geometry of the boundaries that are present in the acoustic problem. We won't be covering situations where the Combined Helmholtz Integral Equation Formulation is needed, therefore, the chief_file and n_chief parameters won’t be commented in the following block of code.
+</p>
+
+{{< highlight cpp>}}
+modgeom={
+ active = 1;       // Built-in geometry generation is active
+ geoms = ["sph"];  // "sph" indicates that a Sphere geometry will be used
+ mics_file = "acousto.mics1.5.mesh"; // Microphone coordinates file
+ nmics = 100;   // Number of microphones in mics_file
+ chief_file = "acousto.chief.mesh";
+ nchief = 0;
+};
+{{< / highlight >}}
+
+<p align="justify">
+Currently, AcouSTO has five geometry types that can be configured within the program:
+</p>
+
+<ol>
+  <li>Sphere.</li>
+  <li>Cylinder.</li>
+  <li>Plate.</li>
+  <li>Nodes.</li>
+  <li>GMSH.</li>
+</ol>
+
+<p align="justify">
+For this tutorial, it is sufficient to make use of the built-in sphere geometry type to build the rigid sphere of radius $a=1$ of our problem. Although the Book of Tutorials provides instructions for importing previously created geometries from GMSH, I will leave this alternative for a future tutorial, as it requires some knowledge of the program and I prefer to keep things simple for now. 
+</p>
+
+{{< highlight cpp>}}
+sph={
+  type="sphere"; // Name of AcouSTO 's pre-built geometry
+  radius=1.0;
+  segments=24;  // Number of slices along the longitude of the sphere
+  rings=24;     // Number of slices along the latitude of the sphere
+translation={x=0.0; y=0.0; z=0.0;}; // Transformation parameters
+rotation={x=0.0; y=-90.0; z=0.0;};
+};
+{{< / highlight >}}
+
+<p align="justify">
+Notice that the longitudinal number of partitions coincides with the number of slices set up by the parameter ksymmi in the modgeom block (both parameters have a value of 24). One final note regarding geometry creation is a comment on transformations such as scaling, translation, and rotation. These transformations can be applied to geometries within AcouSTO by adding the following parameters:
+</p>
+
+{{< highlight cpp>}}
+mygeom={
+...
+scale = {
+x = <x scaling factor>;
+y = <y scaling factor>;
+z = <z scaling factor>;
+};
+translation = {
+x = <x translation>;
+y = <y translation>;
+z = <z translation>;
+};
+rotation = {
+x = <rotation around X axis in degrees>;
+y = <rotation around Y axis in degrees>;
+z = <rotation around Z axis in degrees>;
+};
+}
+{{< / highlight >}}
+
+<p align="justify">
+In the particular case of the problem that we are solving, it is essential to rotate the spherical geometry by 90&deg around the Y global axis. This will align the sphere's default polar axis with the global X-axis, ensuring that the solution to the problem is symmetrical w.r.t. to the axis of convenience. This is graphically explained as shown in the following figure:
+</p>
+
+<ul>
+ <li> <strong><em>modsol</em> block :</strong>
+ </li>
+</ul>
+
+<p align="justify">
+This block manages the solution parameters. In this block, sigma and omega are the real and imaginary parts of the Laplace variable, {{< math >}}$s=\sigma+i\omega${{< math >}}. It is up to the user to enter the values for the frequency range in {{< math >}}$rad/s${{< math >}} using the parameters minome and maxome, or in {{< math >}}$Hz${{< math >}} by using the parameters minfreq and maxfreq.
+</p>
+
+{{< highlight cpp>}}
+modsol={
+ active=1; // Activates the solution
+ pre_calculate_coefs=1; // Activates coeffitient storage in RAM
+ solver="GMRES"; // Selection of the solver type
+ sources_file="acousto.sources"; // Source coordinates and frequency file
+ nsourc=1; // Number of sources present in the acoustic problem
+ knw=2; // Type of AcouSTO's math formulation (Type 1 or 2)
+ rho=1.21; // Air density value [Kg/m^3]
+ minsig=0.0; // Minimum value for sigma
+ maxsig=0.0;  // Maximum value for sigma
+ nsig=1; // Number of samples for sigma
+ minfreq=171.5; // Minimum value for frequency [Hz]
+ maxfreq=218.36;  // Maximum value for frequency [Hz]
+ nome=1;  // Number of samples for omega
+ printout=1; // Activates output in VTK format
+ printmsh=1;  // Activates output in ASCIII format
+ printwrl=1;  // Activates output in VRML2 format
+ printvtk=1;  // Activates output in GMSH format
+ print_on_master=1;
+};
+{{< / highlight >}}
+
+<p align="justify">
+We have completed the explanation of AcouSTO 's pre-processing configuration for the scattering of a spherical wave by a rigid sphere. Now, we can proceed to run the configuration file through the solver to obtain the acoustic problem solutions. This will be covered in the next blog post.
 </p>
 
 <hr>
 <h2> Resources </h2>
 <hr>
-Iemma, U. & Marchese, V. (2017). 
+
+Iemma, U. & Marchese, V. (2017). Book of Tutorials. https://acousto.sourceforge.net/Tutorials.pdf
+Martin, G. (2011). Introduction to Sound Recording. https://www.tonmeister.ca/main/textbook/
+Wikipedia. (2023). Legendre polynomials. https://en.wikipedia.org/wiki/Legendre_polynomials

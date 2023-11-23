@@ -51,7 +51,7 @@ $$
 {{< math >}} 
 {{< math >}} 
 $$
-+ \frac{ik}{2\pi}\sum_{n=0}^{\infty}{\left( n+\frac{1}{2} \right) \frac{j'_n(ka)h_n(kr_s)}{h'_n(ka)}}h_n(kr)P_n(\cos\theta)
++ \frac{ik}{2\pi}\sum_{n=0}^{\infty}{\left( n+\frac{1}{2} \right) \frac{j'_n(ka)h_n(kr_s)}{h'_n(ka)}}h_n(kr)P_n(\cos\theta) \tag2
 $$
 {{< math >}} 
 

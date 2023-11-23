@@ -46,9 +46,15 @@ The solution to equation {{< math >}}$(1)${{< math >}} can be written, in polar 
 
 {{< math >}} 
 $$
-\phi(r,\theta)=\phi_{inc}+\phi_{sc}=-\frac{e^{ikR}}{4 \pi R}+\frac{ik}{2\pi}\sum_{n=0}^{\infty}{\left( n+\frac{1}{2} \right) \frac{j'_n(ka)h_n(kr_s)}{h'_n(ka)}}h_n(kr)P_n(\cos\theta) \space \tag2
+\phi(r,\theta)=\phi_{inc}+\phi_{sc}=-\frac{e^{ikR}}{4 \pi R}
 $$
 {{< math >}} 
+{{< math >}} 
+$$
++ \frac{ik}{2\pi}\sum_{n=0}^{\infty}{\left( n+\frac{1}{2} \right) \frac{j'_n(ka)h_n(kr_s)}{h'_n(ka)}}h_n(kr)P_n(\cos\theta)
+$$
+{{< math >}} 
+
 
 <p align="justify">
 This equation is used to calculate the potential velocity measured at a circle formed by 100 microphones positioned at a distance {{< math >}} $r_{mics}=1.5a${{< math >}} . Some of the terms within the equation may seem complex, hence, to provide a better understanding, a list containing their explanations is presented below:

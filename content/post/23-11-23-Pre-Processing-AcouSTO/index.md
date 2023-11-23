@@ -49,7 +49,7 @@ The solution to equation {{< math >}}$(1)${{< math >}} can be written, in polar 
 
 {{< math >}} 
 $$
-\phi(r,\theta)=\phi_{inc}+\phi_{sc}=-\frac{e^{ikR}}{4 \pi R}+\frac{ik}{2\pi}\sum_{n=0}^{\infin}{\left( n+\frac{1}{2} \right) \frac{j'_n(ka)h_n(kr_s)}{h'_n(ka)}}h_n(kr)P_n(\cos\theta) \tag2
+\phi(r,\theta)=\phi_{inc}+\phi_{sc}=-\frac{e^{ikR}}{4 \pi R}+\frac{ik}{2\pi}\sum_{n=0}^{\infty}{\left( n+\frac{1}{2} \right) \frac{j'_n(ka)h_n(kr_s)}{h'_n(ka)}}h_n(kr)P_n(\cos\theta) \tag2
 $$
 {{< math >}} 
 
@@ -73,7 +73,8 @@ We will solve the acoustic problem for the given values {{< math >}}$a=1${{< mat
 <p align="justify">
 The files needed for the tutorial are located under the path:
 </p>
-```
+
+```Docker
 ~/acousto-1.6b/doc/tutorials/Sphere_Monopole$
 ```
 <p align="justify">
@@ -90,12 +91,12 @@ For this first approach to AcouSTO, we’ll only be using the following files:
 AcouSTO 's configuration files consist of modular code blocks. The blocks contain the parameter values for the many variables that the program has to consider when solving an acoustic simulation. Below, we will analyze the meaning behind the most important parameters of each of the blocks contained within the sphere_source.cfg configuration file.
 </p>
 
-* **_runinfo_ block:**
+* ***runinfo* block:**
 <p align="justify">
 This block contains the general parameters and information about the code execution.
 </p>
 
-```c
+```c++
 runinfo={
  active = 1; 
  title = "custom-title";   // Title of the current code execution

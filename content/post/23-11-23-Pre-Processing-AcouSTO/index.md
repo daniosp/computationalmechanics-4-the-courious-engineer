@@ -66,6 +66,8 @@ This equation is used to calculate the potential velocity measured at a circle f
 
  <li>{{< math >}}$R=||\mathbf{r-r_s}||${{< math >}}: Indicates the magnitude of the distance distance between an arbitrary point in space, {{< math >}}$\mathbf{r}=(r,\theta)${{< math >}}, and the point where the source is located, {{< math >}}$\mathbf{r_s}=(r_s,0)${{< math >}}.</li>
 
+</ol>
+
 <p align="justify">
 We will solve the acoustic problem for the given values {{< math >}}$a=1${{< math >}} and {{< math >}}$r_s=3${{< math >}}. In the following section, we will discuss how the main configuration file is set up to solve the problem correctly with the use of AcouSTO.
 </p>
@@ -115,13 +117,13 @@ For this first approach to AcouSTO, we’ll only be using the following files:
     <td class="tg-0pky">Coordinate placement for the circle of microphones.</td>
   </tr>
 </tbody>
-</table>     |
+</table>
 
 <p align="justify">
 AcouSTO 's configuration files consist of modular code blocks. The blocks contain the parameter values for the many variables that the program has to consider when solving an acoustic simulation. Below, we will analyze the meaning behind the most important parameters of each of the blocks contained within the sphere_source.cfg configuration file.
 </p>
 
-* ***runinfo* block:**
+* <strong><em>runinfo</em> block:</strong>
 <p align="justify">
 This block contains the general parameters and information about the code execution.
 </p>
@@ -132,7 +134,7 @@ runinfo={
  title = "custom-title";   // Title of the current code execution
  owner = "name";           // Username of the person who runs the code
  ksymmi=24;                // Symmetry flag
- krow  =-1;                // N° of matrix rows to be loaded in RAM
+ krow  =-1;                // Number of matrix rows to be loaded in RAM
  vsound  =343.0;           // Speed of sound, 343 m/s for standard air
 };
 ```

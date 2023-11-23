@@ -76,17 +76,10 @@ We will solve the acoustic problem for the given values {{< math >}}$a=1${{< mat
 The files needed for the tutorial are located under the path:
 </p>
 
-{{< highlight PowerShell "linenos=table" >}}
+{{< highlight PowerShell>}}
 ~/acousto-1.6b/doc/tutorials/Sphere_Monopole$
 {{< / highlight >}}
 
-{{< highlight go "linenos=table" >}}
-~/acousto-1.6b/doc/tutorials/Sphere_Monopole$
-{{< / highlight >}}
-
-```PowerShell
-~/acousto-1.6b/doc/tutorials/Sphere_Monopole$
-```
 <p align="justify">
 For this first approach to AcouSTO, we'll only be using the following files:
 </p>
@@ -136,7 +129,7 @@ AcouSTO 's configuration files consist of modular code blocks. The blocks contai
 This block contains the general parameters and information about the code execution.
 </p>
 
-```c++
+{{< highlight c++>}}
 runinfo={
  active = 1; 
  title = "custom-title";   // Title of the current code execution
@@ -145,7 +138,8 @@ runinfo={
  krow  =-1;                // Number of matrix rows to be loaded in RAM
  vsound  =343.0;           // Speed of sound, 343 m/s for standard air
 };
-```
+{{< / highlight >}}
+
 <p align="justify">
 The parameter ksymmi becomes particularly important for this problem as it indicates the number of symmetric slices that the solver will handle. Later it will be shown that the value of this parameter is consistent with the configuration of the geometry. For axis-symmetrical problems, the parameter has values {{< math >}}$N>3${{< math >}}, where {{< math >}}$N${{< math >}} refers to the number of partitions of the geometry.  On the other hand, the krow flag controls memory allocation in RAM. When the value of this parameter is set to krow {{< math >}}$\le 0${{< math >}}, like in this case, it indicates to AcouSTO that the number of matrixes to be loaded in RAM is equal to the total number of control points of the geometry. 
 </p>

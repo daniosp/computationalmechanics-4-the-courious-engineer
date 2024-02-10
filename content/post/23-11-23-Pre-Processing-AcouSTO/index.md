@@ -272,5 +272,7 @@ We have completed the explanation of AcouSTO 's pre-processing configuration for
 <hr>
 
 Iemma, U. & Marchese, V. (2017). Book of Tutorials. https://acousto.sourceforge.net/Tutorials.pdf
+
 Martin, G. (2011). Introduction to Sound Recording. https://www.tonmeister.ca/main/textbook/
+
 Wikipedia. (2023). Legendre polynomials. https://en.wikipedia.org/wiki/Legendre_polynomials

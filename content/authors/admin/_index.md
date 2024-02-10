@@ -40,9 +40,9 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:dospina@eafit.edu.co'
-  - icon: linkedin
-    icon_pack: fab
-    link: https://www.linkedin.com/in/danielospajoy/
+  #- icon: linkedin
+  #  icon_pack: fab
+  #  link: https://www.linkedin.com/in/danielospajoy/
   - icon: github
     icon_pack: fab
     link: https://github.com/daniosp

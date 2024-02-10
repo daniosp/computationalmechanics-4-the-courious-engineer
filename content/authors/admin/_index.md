@@ -21,10 +21,10 @@ organizations:
 bio: My research interests include acoustics, computer-aided design, computer-aided engineering, and dynamic systems.
 
 interests:
-  - Acoustics.
-  - Computer-Aided Design.
   - Computer-Aided Engineering.
-  - Dynamic Systems.
+  - Computational Mechanics.
+  - Finite Element Analysis.
+  - Dynamical Systems.
 
 education:
   courses:
@@ -40,14 +40,17 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:dospina@eafit.edu.co'
+  - icon: linkedin
+    icon_pack: fab
+    link: https://www.linkedin.com/in/danielospajoy/
   - icon: github
     icon_pack: fab
     link: https://github.com/daniosp
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+ - icon: cv
+   icon_pack: ai
+   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
@@ -57,11 +60,9 @@ highlight_name: false
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-user_groups:
-  - Researchers
+#user_groups:
+#  - Researchers
 ---
 
-Hi there!
-I'm a Mechanical Engineering Student at Universidad EAFIT. My research interests include Acoustics, Computer-aided design, Computer-aided engineering, and Dynamic Systems. I've participated in the CAD/CAM/CAE laboratory as a Teacher Assistant and researcher, where I've developed knowledge in Geometric Modeling.
-
+I'm a Mechanical Engineering student committed to continuous learning and focused on applications that blend engineering with new technologies. With a strong interest in research and education, I have acquired technical skills in the use of computer-aided engineering tools and various programming languages.
 

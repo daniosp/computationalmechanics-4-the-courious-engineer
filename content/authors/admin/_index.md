@@ -40,12 +40,13 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:dospina@eafit.edu.co'
-  #- icon: linkedin
-  #  icon_pack: fab
-  #  link: https://www.linkedin.com/in/danielospajoy/
+  - icon: linkedin
+    icon_pack: fab
+    link: https://www.linkedin.com/in/danielospajoy/
   - icon: github
     icon_pack: fab
     link: https://github.com/daniosp
+
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
  - icon: cv
@@ -60,8 +61,8 @@ highlight_name: false
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-#user_groups:
-#  - Researchers
+user_groups:
+  - Researchers
 ---
 
 I'm a Mechanical Engineering student committed to continuous learning and focused on applications that blend engineering with new technologies. With a strong interest in research and education, I have acquired technical skills in the use of computer-aided engineering tools and various programming languages.
